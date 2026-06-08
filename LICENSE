@@ -1,0 +1,33 @@
+Research Use License — 6GSimo 1.5 (sixg-sim)
+
+Copyright (c) 2026 6GSimo 1.5 contributors
+
+Redistribution and use of this software and associated documentation files
+(the "Software") in source or binary form are permitted for NON-COMMERCIAL
+RESEARCH, TEACHING, AND ACADEMIC PURPOSES ONLY, subject to the following:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions, and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. COMMERCIAL USE — including incorporation into products or services offered
+   for sale or used primarily for commercial advantage — is not allowed under
+   this license without prior written permission from the copyright holder(s).
+
+4. Publications or derived research that materially uses the Software should
+   acknowledge 6GSimo 1.5 (sixg-sim) and, when practical, cite or link to the
+   source repository.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
