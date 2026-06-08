@@ -50,9 +50,9 @@ When you run `python -m sixg_sim --scenario path/to/scenario.py`, the CLI loads 
 | [UPF overload → CP](#upf-overload-and-cp-reconfigure) | Degrade UPF; CP `RECONFIGURE_UPF` | — | ✓ |
 | [Event-driven CP](#event-driven-control-plane) | Extra CP when RAN/UPF backlog high | — | ✓ via env |
 | [DN / UE hairpin](#user-plane-traffic) | UE-to-UE traffic via core | — | ✓ |
-| [Packet lifecycle trace](#observability) | Per-hop CSV | ✓ | ✓ |
+| [Packet lifecycle trace](#observability) | Per-hop CSV | ✓ | ✓ |    
 | [UPF episode metrics](#observability) | Degradation integrals in `summary.json` | — | ✓ |
-| [M/M/1 validation mode](#optional-mm1-validation) | Reduced path for theory comparison | — | — (env only) |
+| [M/M/1 validation mode](#optional-mm1-validation) | Reduced path for theory comparison | — | — (env only) |     
 
 **Reading the table:** start with **`demo_simple`** to see queueing, signalling, baseline CP, and traces. Use **`demo_complex`** to exercise load, overload, advanced UPF behaviour, and optional CP modes.
 
