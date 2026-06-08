@@ -4,6 +4,8 @@
 
 Install as the Python package **`sixg-sim`** (`import sixg_sim`). Release **1.5.0** (see `pyproject.toml`).
 
+**Repository:** [github.com/bogdusc282/6GSimo](https://github.com/bogdusc282/6GSimo)
+
 This release includes **two ready-made scenarios** (`demo_simple.py`, `demo_complex.py`) that map directly onto the simulator’s features—use them to learn the tool, then copy and extend them for your own work.
 
 ---
