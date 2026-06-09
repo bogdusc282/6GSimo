@@ -23,12 +23,17 @@ _HOP_COLS = (5, 18, 32, 45)  # column index for ● on each row (approx.)
 _SPINNER = "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
 
 
-def _animation_enabled() -> bool:
+def animation_enabled() -> bool:
+    """True when the live terminal animation will run (TTY, not disabled)."""
     if os.environ.get("SIXG_SIM_NO_ANIMATION", "").strip().lower() in ("1", "true", "yes"):
         return False
     if os.environ.get("NO_COLOR"):
         return False
     return hasattr(sys.stdout, "isatty") and bool(sys.stdout.isatty())
+
+
+def _animation_enabled() -> bool:
+    return animation_enabled()
 
 
 def _use_color() -> bool:
@@ -79,9 +84,16 @@ class _RunAnimator:
     def start(self) -> None:
         if not _animation_enabled():
             return
+        from sixg_sim.banner import print_welcome
+
         self._stop.clear()
         sys.stdout.write("\033[?1049h\033[H\033[?25l")
         sys.stdout.flush()
+        # Banner is printed on the main screen by the CLI; alternate screen hides it.
+        print_welcome(force=True)
+        pause_s = float(os.environ.get("SIXG_SIM_BANNER_PAUSE_S", "1.2"))
+        if pause_s > 0:
+            time.sleep(pause_s)
         self._active = True
         self._thread = threading.Thread(target=self._loop, name="sixg-sim-anim", daemon=True)
         self._thread.start()
@@ -92,7 +104,7 @@ class _RunAnimator:
         self._stop.set()
         if self._thread is not None:
             self._thread.join(timeout=1.0)
-        sys.stdout.write("\033[?1049h\033[?25h")
+        sys.stdout.write("\033[?1049l\033[?25h")
         sys.stdout.flush()
         self._active = False
 

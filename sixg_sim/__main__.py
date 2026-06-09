@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 from sixg_sim.banner import print_welcome
-from sixg_sim.run_animation import run_animation
+from sixg_sim.run_animation import animation_enabled, run_animation
 from sixg_sim.control_plane import control_plane_summary_for_sim
 from sixg_sim.entities import DataNetwork
 from sixg_sim.modular import default_scenario_py_path, load_modular_scenario_py
@@ -50,7 +50,9 @@ def main() -> None:
         ),
     )
     args = parser.parse_args()
-    print_welcome()
+    # When animation runs it switches to the alternate screen and shows the banner there.
+    if not animation_enabled():
+        print_welcome()
 
     scenario_path = (args.scenario if args.scenario is not None else default_scenario_py_path()).resolve()
     if args.packet_log is None:
